@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'https://marketmindset-1.onrender.com'],
   credentials: true
 }));
 
@@ -46,7 +46,7 @@ app.get('/download/:filename', (req, res) => {
 
 // Test route
 app.get('/', (req, res) => {
-  res.send('Myriad API Running');
+  res.send('MarketMindest API Running');
 });
 
 
